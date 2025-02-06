@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoruNeko - Restaurante Japonés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #1d1d2e; /* Fondo oscuro para toda la pantalla */
+        }
+
+        /* Encabezado con el nombre del restaurante en el centro */
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para todo el encabezado */
+            padding-left: 150px; /* Desplazamos el contenido hacia la izquierda */
+            position: relative; /* Permite la posición absoluta del logo */
+        }
+
+        .header h1 {
+            font-size: 6rem;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .header p {
+            font-size: 2rem; /* Tamaño más pequeño para el eslogan */
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        /* Logo en la parte derecha */
+        .header img {
+            position: absolute;
+            right: 20px; /* Espacio desde la derecha */
+            top: 50%; /* Centrado verticalmente */
+            transform: translateY(-50%); /* Ajusta la posición para que quede centrado */
+            width: 100px; /* Ajusta el tamaño del logo */
+        }
+
+        /* Fondo lila oscuro para la sección "Sobre Nosotros" */
+        .about {
+            background-color: #2a055a; /* Lila oscuro */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con el nombre del restaurante, eslogan y logo -->
+    <div class="header">
+        <h1>YoruNeko 夜猫</h1>
+        <p>Disfruta de la tradición japonesa en cada bocado.</p>
+        <!-- Aquí puedes agregar la imagen de tu logo -->
+        <img src="ruta_del_logo.png" alt="Logo YoruNeko">
+    </div>
+
+    <!-- Sección Sobre Nosotros con fondo lila oscuro -->
+    <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En YoruNeko, ofrecemos una experiencia gastronómica auténtica de Japón, con platos tradicionales elaborados con ingredientes frescos y de calidad. Disfruta de la tradición japonesa en cada bocado.</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoruNeko - Restaurante Japonés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3a2d6f;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 40px;
+            text-transform: uppercase;
+            color: #ffd700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Añadí sombra para destacarlo más */
+            border-bottom: 3px solid #ffd700; /* Agregué un borde para darle más énfasis */
+            padding-bottom: 10px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 30px auto 30px;
+            background-color: #2c2440;
+            border-radius: 15px;
+            padding-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Agregué sombra para más contraste */
+        }
+        .menu-item {
+            margin: 30px 0;
+        }
+        .food-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .food-item {
+            text-align: center;
+            color: #fff;
+            width: 220px;
+        }
+        .food-item img {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        .food-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ccc;
+        }
+        .food-item p.price {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .menu-item h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #ffd700;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .food-item p:first-of-type {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #3a2d6f;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YoruNeko 夜猫</h1>
+    </header>
+    <section class="menu">
+        <h2>Menú</h2>
+        <div class="menu-item">
+            <h3>Entrantes</h3>
+            <div class="food-list">
+                <div class="food-item">
+                    <img src="Images/Entrantes/Miso Shiru.jpeg" alt="Miso Shiru">
+                    <p>Miso Shiru</p>
+                    <p>Sopa de miso con tofu y algas.</p>
+                    <p class="price">€4.50</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Entrantes/Sunomono.jpg" alt="Sunomono">
+                    <p>Sunomono</p>
+                    <p>Ensalada de pepino con vinagreta de sésamo.</p>
+                    <p class="price">€3.80</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Entrantes/Gyoza.jpeg" alt="Gyoza">
+                    <p>Gyoza</p>
+                    <p>Empanadillas rellenas de carne y vegetales.</p>
+                    <p class="price">€5.50</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Entrantes/Tamagoyaki.jpeg" alt="Tamagoyaki">
+                    <p>Tamagoyaki</p>
+                    <p>Omelette japonés dulce y esponjoso.</p>
+                    <p class="price">€4.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <h3>Plato Principal</h3>
+            <div class="food-list">
+                <div class="food-item">
+                    <img src="Images/Principal/Sushi Variado.jpeg" alt="Sushi Variado">
+                    <p>Sushi Variado</p>
+                    <p>Variedad de sushi con pescado fresco.</p>
+                    <p class="price">€12.00</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Principal/Donburi.jpeg" alt="Donburi">
+                    <p>Donburi</p>
+                    <p>Arroz con carne, pescado o vegetales.</p>
+                    <p class="price">€9.50</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Principal/Ramen.jpeg" alt="Ramen">
+                    <p>Ramen</p>
+                    <p>Sopa de fideos con caldo sabroso.</p>
+                    <p class="price">€8.00</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Principal/Yakitori.jpeg" alt="Yakitori">
+                    <p>Yakitori</p>
+                    <p>Brochetas de pollo a la parrilla.</p>
+                    <p class="price">€6.50</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <h3>Postres</h3>
+            <div class="food-list">
+                <div class="food-item">
+                    <img src="Images/Postre/Mochi.jpeg" alt="Mochi">
+                    <p>Mochi</p>
+                    <p>Bolitas de arroz rellenas de pasta de frijol dulce.</p>
+                    <p class="price">€4.00</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Postre/Dorayaki.jpg" alt="Dorayaki">
+                    <p>Dorayaki</p>
+                    <p>Pastelito relleno de pasta de judía roja.</p>
+                    <p class="price">€3.50</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Postre/Taiyaki.jpeg" alt="Taiyaki">
+                    <p>Taiyaki</p>
+                    <p>Pastelito con forma de pez relleno de pasta dulce.</p>
+                    <p class="price">€5.00</p>
+                </div>
+                <div class="food-item">
+                    <img src="Images/Postre/Anmitsu.jpg" alt="Anmitsu">
+                    <p>Anmitsu</p>
+                    <p>Postre con agar-agar, frutas y jarabe dulce.</p>
+                    <p class="price">€4.80</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 YoruNeko. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
