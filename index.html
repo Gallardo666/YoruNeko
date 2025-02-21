@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YoruNeko - Restaurante Japonés</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Icono de la pestaña -->
+    <!-- Agregar Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #fff;
-            background-color: #1d1d2e; /* Fondo oscuro para toda la pantalla */
+            background-color: #1d1d2e;
         }
 
-        /* Encabezado con el nombre del restaurante en el centro */
         .header {
             display: flex;
             flex-direction: column;
@@ -21,9 +23,9 @@
             align-items: flex-start;
             height: 100vh;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para todo el encabezado */
-            padding-left: 150px; /* Desplazamos el contenido hacia la izquierda */
-            position: relative; /* Permite la posición absoluta del logo */
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-left: 150px;
+            position: relative;
         }
 
         .header h1 {
@@ -34,54 +36,265 @@
         }
 
         .header p {
-            font-size: 2rem; /* Tamaño más pequeño para el eslogan */
+            font-size: 2rem;
             color: #ccc;
             margin-top: 10px;
         }
 
-        /* Logo en la parte derecha */
         .header img {
             position: absolute;
-            right: 20px; /* Espacio desde la derecha */
-            top: 50%; /* Centrado verticalmente */
-            transform: translateY(-50%); /* Ajusta la posición para que quede centrado */
-            width: 100px; /* Ajusta el tamaño del logo */
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
         }
 
-        /* Fondo lila oscuro para la sección "Sobre Nosotros" */
         .about {
-            background-color: #2a055a; /* Lila oscuro */
-            padding: 40px 20px;
-            text-align: center;
+            background-color: #140329;
+            padding: 4rem 4rem;
+            text-align: left;
         }
 
         .about h2 {
             font-size: 32px;
             color: #fff;
             margin-bottom: 20px;
+            margin-left: 20px;
         }
 
         .about p {
             font-size: 18px;
             color: #ddd;
+            margin: 2rem 3rem;
         }
+
+        .about h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .about .why {
+            margin-top: 5rem;
+        }
+
+        .reservations {
+            background-color: #1a0236;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .reservations h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .reservations form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .reservations label {
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .reservations input, 
+        .reservations textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #5a189a;
+            border-radius: 5px;
+            background-color: #2a1b3d;
+            color: #fff;
+            text-align: left;
+        }
+
+        .reservations input::placeholder, 
+        .reservations textarea::placeholder {
+            color: #bbb;
+        }
+
+        .reservations button {
+            background-color: #5a189a;
+            color: white;
+            margin: 2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .reservations button:hover {
+            background-color: #7b2cbf;
+        }
+
+        .menus {
+            background-color: #140329;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .menus h2 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            margin: 0 auto;
+        }
+
+        .menu-item {
+            background-color: #220a3e;
+            margin: 4rem;
+            padding: 2rem 4rem 4rem;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .menu-item h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 1rem 0;
+            font-size: 14px;
+        }
+
+        footer .footer-links {
+            margin: 10px 0;
+        }
+
+        footer .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px; /* Tamaño de los iconos */
+            margin: 0 15px;
+        }
+
+        footer .footer-links a:hover {
+            color: #5a189a;
+        }
+
+        /* Estilos del mapa */
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe {
+            width: 60%;
+            height: 250px; /* Altura reducida */
+            border: none;
+            border-radius: 2rem;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Encabezado con el nombre del restaurante, eslogan y logo -->
     <div class="header">
         <h1>YoruNeko 夜猫</h1>
         <p>Disfruta de la tradición japonesa en cada bocado.</p>
-        <!-- Aquí puedes agregar la imagen de tu logo -->
         <img src="ruta_del_logo.png" alt="Logo YoruNeko">
     </div>
 
-    <!-- Sección Sobre Nosotros con fondo lila oscuro -->
     <section class="about">
         <h2>Sobre Nosotros</h2>
-        <p>En YoruNeko, ofrecemos una experiencia gastronómica auténtica de Japón, con platos tradicionales elaborados con ingredientes frescos y de calidad. Disfruta de la tradición japonesa en cada bocado.</p>
+        <p>En YoruNeko, te ofrecemos una experiencia gastronómica única, combinando lo mejor de la tradición japonesa con un toque moderno. Cada plato es preparado con ingredientes frescos y de alta calidad, pensado para ofrecerte una experiencia inolvidable.</p>
+        
+        <h3 class="why">¿Por qué YoruNeko?</h3>
+        <p>Porque creemos en la autenticidad, la calidad y el servicio excepcional. Cada detalle está pensado para que disfrutes del verdadero sabor de Japón.</p>
     </section>
+    
+    <section class="reservations">
+        <h2>Reservas</h2>
+        <form>
+            <label>Nombre completo: <input type="text" required></label>
+            <label>Teléfono: <input type="tel" required></label>
+            <label>Correo electrónico: <input type="email" required></label>
+            <label>Fecha de reserva: <input type="date" required></label>
+            <label>Número de personas (máx. 15): <input type="number" min="1" max="15" required></label>
+            <label>¿Cómo nos conociste?: <input type="text"></label>
+            <label>Comentarios adicionales:<textarea></textarea></label>
+            <button type="submit">Reservar</button>
+        </form>
+    </section>
+    
+    <section class="menus">
+        <h2>Nuestros Menús</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <h3>Menú de Mañana</h3>
+                <p>Disfruta de un desayuno tradicional japonés con opciones como arroz con pescado, sopa miso y más.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Menú de Cena</h3>
+                <p>Explora platos como sushi, sashimi, ramen y tempura, perfectos para una cena ligera y sabrosa.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Buffet Libre</h3>
+                <p>Un festín de platos japoneses variados, disponibles para que disfrutes todo lo que quieras en un solo servicio.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <!-- Iconos para redes sociales usando Font Awesome -->
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>© 2025 YoruNeko. Todos los derechos reservados.</p>
+
+        <p>Visítanos en: Gran Via de les Corts Catalanes, 123, Barcelona, España</p>
+        
+        <!-- Mapa de Google Maps -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.702721748931!2d2.1702068!3d41.3867909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a28f9d049a3f%3A0xa43d8c8b66e45b8d!2sGran%20Via%20de%20les%20Corts%20Catalanes%2C%20123%2C%2020802%20Barcelona%2C%20España!5e0!3m2!1ses!2ses!4v1674728893027!5m2!1ses!2ses" 
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
 
 </body>
 </html>
