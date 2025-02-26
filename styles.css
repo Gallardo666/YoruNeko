@@ -1,0 +1,209 @@
+:root {
+    --color-fondo-principal: #1d1d2e;
+    --color-fondo-secundario: #140329;
+    --color-fondo-terciario: #1a0236;
+    --color-texto-principal: #fff;
+    --color-texto-secundario: #ccc;
+    --color-texto-claro: #ddd;
+    --color-acento: #ff6f61; /* Color naranja ahora cambiado */
+    --color-parrafo: #cbbfe2; /* Nuevo color para títulos */
+    --color-boton: #5a189a;
+    --color-boton-hover: #7b2cbf;
+    --color-menu-fondo: #24133b;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* Establece el ancho de la barra de desplazamiento */
+    scrollbar-color: var(--color-boton) var(--color-fondo-principal);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo-principal);
+}
+
+/* Estilos de la cabecera */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 6rem;
+    color: var(--color-texto-principal);
+    padding: 0rem;
+    text-align: left;
+}
+
+header p {
+    font-size: 2rem;
+    color: var(--color-texto-secundario);
+    margin-top: 10px;
+}
+
+header img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25rem;
+}
+
+h2{
+    color: var(--color-texto-principal);
+}
+h3{
+    color: var(--color-texto-principal);
+}
+p{
+    color: var(--color-parrafo);
+}
+
+/* Sección Sobre Nosotros */
+.about, .menus {
+    background-color: var(--color-fondo-secundario);
+    padding: 4rem 4rem 6rem;
+    text-align: left;
+}
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.text {
+    max-width: 60%; /* Asegura que el texto no se haga demasiado largo */
+}
+
+.image img {
+    width: 20rem; /* Esto asegura que la imagen se ajuste al tamaño del contenedor */
+    max-width: 15rem; /* Controla el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+}
+
+
+.why {
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+/* Estilos específicos para la sección de Reservas */
+.reservations {
+    background-color: var(--color-fondo-terciario);
+    padding: 4rem 4rem;
+    text-align: center;
+}
+
+.reservations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bold;
+    color: var(--color-texto-claro);
+}
+
+input, textarea {
+    margin-bottom: 2rem;
+    padding: 10px;
+    border: 2px solid var(--color-boton);
+    border-radius: 5px;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+}
+
+textarea {
+    resize: none;
+    height: 6rem;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-boton) var(--color-fondo-principal);
+}
+
+button {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-boton);
+    color: var(--color-texto-principal);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Sección Menús */
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.menu-item {
+    background-color: var(--color-menu-fondo);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .footer-links a {
+    color: var(--color-texto-principal);
+    margin: 0 15px;
+    font-size: 24px;
+}
+
+footer .footer-links a:hover {
+    color: var(--color-boton);
+}
+
+footer p {
+    margin: 10px 0;
+    color: #bbb;
+}
+
+.map-container iframe {
+    width: 60%;
+    height: 250px;
+    border-radius: 2rem;
+}
