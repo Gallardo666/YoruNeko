@@ -31,11 +31,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Logo alineado a la izquierda por defecto */
     height: 100vh;
     padding-left: 150px;
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
+    text-align: left;
 }
 
 header h1 {
@@ -46,12 +47,6 @@ header h1 {
     text-align: left;
 }
 
-header p {
-    font-size: 2rem;
-    color: var(--color-texto-secundario);
-    margin-top: 10px;
-}
-
 header img {
     position: absolute;
     right: 20px;
@@ -60,13 +55,11 @@ header img {
     width: 25rem;
 }
 
-h2{
+h2, h3 {
     color: var(--color-texto-principal);
 }
-h3{
-    color: var(--color-texto-principal);
-}
-p{
+
+p {
     color: var(--color-parrafo);
 }
 
@@ -76,6 +69,7 @@ p{
     padding: 4rem 4rem 6rem;
     text-align: left;
 }
+
 .about-content {
     display: flex;
     justify-content: space-between;
@@ -94,13 +88,12 @@ p{
     border-radius: 10px;
 }
 
-
 .why {
     margin-top: 3rem;
     font-weight: bold;
 }
 
-/* Estilos específicos para la sección de Reservas */
+/* Sección de Reservas */
 .reservations {
     background-color: var(--color-fondo-terciario);
     padding: 4rem 4rem;
@@ -180,6 +173,11 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.menu-item img {
+    width: 16rem;
+    border-radius: 1rem;
+}
+
 /* Footer */
 footer {
     background-color: rgba(0, 0, 0, 0.8);
@@ -207,3 +205,172 @@ footer p {
     height: 250px;
     border-radius: 2rem;
 }
+
+
+/* Media Queries para hacer el diseño responsive */
+
+@media (max-width: 1024px) {
+    header {
+        padding-left: 0; /* Elimina el padding izquierdo */
+        text-align: center; /* Centra todo el contenido */
+        align-items: center; /* Centra el logo en el centro */
+    }
+
+    header h1 {
+        display: none; /* Oculta el texto en pantallas más pequeñas */
+    }
+
+    header p {
+        display: none; /* Sigue ocultando el texto */
+    }
+
+    header img {
+        margin: -4rem 0rem 3rem 2rem;
+        width: 40rem; /* Ajusta el tamaño de la imagen */
+        position: relative; /* El logo se centra de manera relativa */
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        width: 30rem;
+        max-width: 100%;
+    }
+
+    .reservations {
+        padding: 2rem;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .menu-container {
+        align-items: center;
+    }
+
+    .menu-item {
+        margin: 2rem 0.5rem;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    footer .footer-links a {
+        font-size: 18px;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    header {
+        padding-left: 0; /* Elimina el padding izquierdo */
+        text-align: center; /* Centra todo el contenido */
+        align-items: center; /* Centra el logo en el centro */
+    }
+
+    header h1 {
+        display: none; /* Oculta el texto en pantallas más pequeñas */
+    }
+
+    header p {
+        display: none; /* Sigue ocultando el texto */
+    }
+
+    header img {
+        margin: 10rem 0rem 3rem 2rem; /* Aplica el mismo margen que en 1024px */
+        width: 40rem; /* Ajusta el tamaño de la imagen */
+        position: relative; /* El logo se centra de manera relativa */
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        width: 30rem;
+        max-width: 100%;
+    }
+
+    .reservations {
+        padding: 2rem;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    footer .footer-links a {
+        font-size: 18px;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+    header h1 {
+        display: none; /* Sigue ocultando el texto */
+    }
+
+    header p {
+        display: none; /* Sigue ocultando el texto */
+    }
+
+    header img {
+        width: 25rem; /* Ajusta aún más el tamaño del logo */
+        margin:0 0 6rem 2.5rem ; /* Ajuste de posición para que quede bien */
+    }
+
+    .about-content {
+        padding: 1rem;
+    }
+
+    .menu-item {
+        max-width: 90%;
+    }
+
+    .reservations h2 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    footer .footer-links a {
+        font-size: 16px;
+    }
+}
+
