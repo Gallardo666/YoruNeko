@@ -16,6 +16,7 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: thin; /* Establece el ancho de la barra de desplazamiento */
     scrollbar-color: var(--color-boton) var(--color-fondo-principal);
+    overflow-x: hidden;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
     padding: 0;
     color: var(--color-texto-principal);
     background-color: var(--color-fondo-principal);
+    overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
@@ -374,3 +376,9 @@ footer p {
     }
 }
 
+/* Pantallas muy pequeñas (móviles muy pequeños) */
+@media (max-width: 375px) {
+    .menu-item img{
+        width: 10rem;
+    }
+}
