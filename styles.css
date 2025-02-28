@@ -80,7 +80,8 @@ header img {
 
 /* Logo del restaurante */
 .navbar .logo {
-    height: 8.6rem; /* Ajusta el tamaño del logo */
+    height: 6rem; /* Ajusta el tamaño del logo */
+    margin-left: 1%;
 }
 
 /* Menú hamburguesa */
@@ -88,10 +89,12 @@ header img {
     display: none;
 }
 
+
 .hamburger-menu {
     cursor: pointer;
     font-size: 2rem;
     color: white;
+    margin-right: 2%;
 }
 
 .dropdown-menu {
@@ -254,6 +257,16 @@ button:hover {
     width: 16rem;
     border-radius: 1rem;
 }
+
+.boton-menu{
+    margin-top: 4%;
+}
+.boton-menu a{
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+}
+
+
 
 /* Footer */
 footer {
