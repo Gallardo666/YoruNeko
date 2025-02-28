@@ -225,7 +225,7 @@ footer p {
     }
 
     header img {
-        margin: -4rem 0rem 3rem 2rem;
+        margin: 0rem 3rem 15rem 2rem;
         width: 40rem; /* Ajusta el tamaño de la imagen */
         position: relative; /* El logo se centra de manera relativa */
     }
@@ -289,7 +289,7 @@ footer p {
     }
 
     header img {
-        margin: 10rem 0rem 3rem 2rem; /* Aplica el mismo margen que en 1024px */
+        margin: 0rem 1rem 15rem 2rem; /* Aplica el mismo margen que en 1024px */
         width: 40rem; /* Ajusta el tamaño de la imagen */
         position: relative; /* El logo se centra de manera relativa */
     }
@@ -349,7 +349,7 @@ footer p {
 
     header img {
         width: 25rem; /* Ajusta aún más el tamaño del logo */
-        margin:0 0 6rem 2.5rem ; /* Ajuste de posición para que quede bien */
+        margin:0 0.5rem 30rem 2.5rem ; /* Ajuste de posición para que quede bien */
     }
 
     .about-content {
