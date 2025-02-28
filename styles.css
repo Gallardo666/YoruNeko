@@ -11,7 +11,6 @@
     --color-boton-hover: #7b2cbf;
     --color-menu-fondo: #24133b;
     
-    /* Colores adicionales extraídos de otros estilos */
     --color-navbar-bg: rgb(16, 16, 16);
     --color-dropdown-bg: rgb(24, 24, 24);
     --color-dropdown-hover-bg: rgb(37, 37, 37);
@@ -24,7 +23,7 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: thin; /* Establece el ancho de la barra de desplazamiento */
     scrollbar-color: var(--color-boton) var(--color-fondo-principal);
-    overflow-x: hidden;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -137,11 +136,13 @@ p {
 }
 
 /* Sección Sobre Nosotros */
-.about, .menus {
+.about, .menus, .reservations {
     background-color: var(--color-fondo-secundario);
     padding: 4rem 4rem 6rem;
+    padding-top: calc(70px + 1rem); /* Añade espacio superior para no cubrir el título */
     text-align: left;
 }
+
 
 .about-content {
     display: flex;
