@@ -9,13 +9,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header (Encabezado) -->
     <header>
         <h1>YoruNeko 夜猫</h1>
         <p>Disfruta de la tradición japonesa en cada bocado.</p>
-        <img src="Images/Logo/LogoYoruNeko.png" alt="Logo YoruNeko">
+        <img src="Images/Logo/LogoYoruNeko.png" title="Logo YoruNeko" alt="Logo YoruNeko">
     </header>
-    <section class="about">
 
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <img id="nav" src="Images/Logo/LogoYoruNeko.png" title="Logo YoruNeko" alt="Logo Restaurante Japonés" class="logo">
+        
+        <!-- Menu hamburguesa con checkbox -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-menu">
+            <i class="fas fa-bars"></i> <!-- Icono de tres rayas de FontAwesome -->
+        </label>
+        
+        <!-- Menú desplegable -->
+        <div class="dropdown-menu">
+            <a href="#about">Sobre nosotros</a>
+            <a href="#menu">Menú</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+    
+
+    <section id="about" class="about">
         <div class="about-content">
             <div class="text">
                 <h2>Sobre Nosotros</h2>
@@ -25,12 +46,33 @@
                 <p>Porque creemos en la autenticidad, la calidad y el servicio excepcional. Cada detalle está pensado para que disfrutes del verdadero sabor de Japón.</p>
             </div>
             <div class="image">
-                <img src="Images/RestauranteYoruNeko.jpeg" alt="Plato Japonés">
+                <img src="Images/RestauranteYoruNeko.jpeg" title="Imagen del Restaurente" alt="Plato Japonés">
             </div>
         </div>
     </section>    
     
-    <section class="reservations">
+    <section id="menu" class="menus">
+        <h2>Nuestros Menús</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <h3>Menú de Mañana</h3>
+                <p>Disfruta de un desayuno tradicional japonés con opciones como arroz con pescado, sopa miso y más.</p>
+                <img src="Images/MenuComida.jpeg" title="Menu de Comida" alt="Menu de Mañana con Tamago Sando, Melon Pans y Bento de Pollo Reriyaki">
+            </div>
+            <div class="menu-item">
+                <h3>Menú de Cena</h3>
+                <p>Explora platos como sushi, sashimi, ramen y tempura, perfectos para una cena ligera y sabrosa.</p>
+                <img src="Images/MenuCena.jpeg" title="Menu de Cena" alt="Menu de Cena con Tempura Mixta, Sashami Variado, Cheesecake de Yuzu">
+            </div>
+            <div class="menu-item">
+                <h3>Buffet Libre</h3>
+                <p>Un festín de platos japoneses variados, disponibles para que disfrutes todo lo que quieras en un solo servicio.</p>
+                <img src="Images/MenuBufet.jpg" title="Menu de Bufet" alt="Plato de Bufet con Maki y Sushi">
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="reservations">
         <h2>Reservas</h2>
         <form action="https://formspree.io/f/xgvojbzr" method="POST">
             <label>Nombre completo: 
@@ -63,27 +105,6 @@
             
             <button type="submit">Reservar</button>
         </form>
-    </section>
-    
-    <section class="menus">
-        <h2>Nuestros Menús</h2>
-        <div class="menu-container">
-            <div class="menu-item">
-                <h3>Menú de Mañana</h3>
-                <p>Disfruta de un desayuno tradicional japonés con opciones como arroz con pescado, sopa miso y más.</p>
-                <img src="Images/MenuComida.jpeg" title="Menu de Comida" alt="Menu de Mañana con Tamago Sando, Melon Pans y Bento de Pollo Reriyaki">
-            </div>
-            <div class="menu-item">
-                <h3>Menú de Cena</h3>
-                <p>Explora platos como sushi, sashimi, ramen y tempura, perfectos para una cena ligera y sabrosa.</p>
-                <img src="Images/MenuCena.jpeg" title="Menu de Cena" alt="Menu de Cena con Tempura Mixta, Sashami Variado, Cheesecake de Yuzu">
-            </div>
-            <div class="menu-item">
-                <h3>Buffet Libre</h3>
-                <p>Un festín de platos japoneses variados, disponibles para que disfrutes todo lo que quieras en un solo servicio.</p>
-                <img src="Images/MenuBufet.jpg" title="Menu de Bufet" alt="Plato de Bufet con Maki y Sushi">
-            </div>
-        </div>
     </section>
 
     <footer>

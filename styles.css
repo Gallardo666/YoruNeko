@@ -10,8 +10,16 @@
     --color-boton: #5a189a;
     --color-boton-hover: #7b2cbf;
     --color-menu-fondo: #24133b;
+    
+    /* Colores adicionales extraídos de otros estilos */
+    --color-navbar-bg: rgb(16, 16, 16);
+    --color-dropdown-bg: rgb(24, 24, 24);
+    --color-dropdown-hover-bg: rgb(37, 37, 37);
+    --color-footer-bg: rgba(0, 0, 0, 0.8);
+    --color-footer-link-hover: var(--color-boton);
 }
 
+/* HTML base styles */
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin; /* Establece el ancho de la barra de desplazamiento */
@@ -25,7 +33,6 @@ body {
     padding: 0;
     color: var(--color-texto-principal);
     background-color: var(--color-fondo-principal);
-    overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
@@ -39,6 +46,7 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     text-align: left;
+    overflow-x: hidden;
 }
 
 header h1 {
@@ -56,6 +64,69 @@ header img {
     transform: translateY(-50%);
     width: 25rem;
 }
+
+
+/* Estilos generales para el nav */
+.navbar {
+    background-color: var(--color-navbar-bg);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Esto asegura que se quede pegado a la parte superior */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo del restaurante */
+.navbar .logo {
+    height: 8.6rem; /* Ajusta el tamaño del logo */
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: var(--color-dropdown-bg);
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 250px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.menu-toggle:checked + .hamburger-menu + .dropdown-menu {
+    display: block;
+    margin-top: 5rem;
+}
+
+/* Estilo de los enlaces del menú */
+.dropdown-menu a {
+    text-decoration: none;
+    color: #f1f1f1; /* Color claro para los enlaces */
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #444444;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--color-dropdown-hover-bg);
+}
+
 
 h2, h3 {
     color: var(--color-texto-principal);
@@ -97,7 +168,7 @@ p {
 
 /* Sección de Reservas */
 .reservations {
-    background-color: var(--color-fondo-terciario);
+    background-color: var(--color-fondo-secundario);
     padding: 4rem 4rem;
     text-align: center;
 }
@@ -157,6 +228,9 @@ button:hover {
 }
 
 /* Sección Menús */
+.menus{
+    background-color: var(--color-fondo-terciario);
+}
 .menu-container {
     display: flex;
     justify-content: space-around;
@@ -182,9 +256,13 @@ button:hover {
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--color-footer-bg);
     padding: 40px 0;
     text-align: center;
+}
+
+footer .footer-links {
+    margin-bottom: 1.6rem;
 }
 
 footer .footer-links a {
@@ -194,7 +272,7 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover {
-    color: var(--color-boton);
+    color: var(--color-footer-link-hover);
 }
 
 footer p {
@@ -211,6 +289,7 @@ footer p {
 
 /* Media Queries para hacer el diseño responsive */
 
+/* Ajustes para pantallas más grandes */
 @media (max-width: 1024px) {
     header {
         padding-left: 0; /* Elimina el padding izquierdo */
